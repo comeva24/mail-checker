@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー | メール物件チェッカー</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50">
+
+<div class="max-w-2xl mx-auto px-6 py-16">
+
+  <header class="mb-10">
+    <p class="text-sm text-slate-500"><a href="./index.html" class="text-blue-700 underline">メール物件チェッカー</a></p>
+    <h1 class="text-3xl font-bold text-slate-900 mt-2">プライバシーポリシー</h1>
+    <p class="mt-2 text-sm text-slate-500">最終更新日：2026年9月5日</p>
+  </header>
+
+  <div class="space-y-6">
+
+    <section class="bg-white rounded-xl p-6 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-3">1. このツールについて</h2>
+      <p class="text-slate-700">
+        「メール物件チェッカー」（以下「本ツール」）は、開発者本人が自分あてに届く
+        不動産物件の案内メールを確認するために作成した個人用ツールです。
+        第三者に提供・販売しているサービスではなく、利用者は開発者本人のみです。
+      </p>
+    </section>
+
+    <section class="bg-white rounded-xl p-6 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-3">2. 取得する情報</h2>
+      <p class="text-slate-700 mb-3">
+        本ツールは Gmail API を利用し、以下の権限で利用者本人のメールにアクセスします。
+      </p>
+      <div class="bg-slate-100 rounded-lg p-4 mb-3">
+        <code class="text-sm text-slate-800">https://www.googleapis.com/auth/gmail.readonly</code>
+      </div>
+      <p class="text-slate-700 mb-3">これは<strong>読み取り専用</strong>の権限です。取得する情報は次のとおりです。</p>
+      <ul class="space-y-1 text-slate-700 list-disc list-inside">
+        <li>添付ファイル付きメールの件名・送信者・受信日時</li>
+        <li>そのメールに添付されたPDFおよび画像ファイルの内容</li>
+      </ul>
+      <p class="text-slate-700 mt-3">
+        メールの送信・削除・既読化・ラベル変更など、メールボックスを変更する操作は一切行いません。
+      </p>
+    </section>
+
+    <section class="bg-white rounded-xl p-6 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-3">3. 情報の利用目的</h2>
+      <p class="text-slate-700">
+        取得した添付資料は、物件の価格・利回り・所在地・築年数などを読み取るためだけに利用します。
+        読み取った情報をあらかじめ設定した投資基準と照らし合わせ、
+        条件を満たす物件を利用者本人のLINEアカウントに通知します。
+      </p>
+    </section>
+
+    <section class="bg-white rounded-xl p-6 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-3">4. 外部サービスへの送信</h2>
+      <p class="text-slate-700 mb-3">上記の目的のため、以下の外部サービスを利用します。</p>
+      <ul class="space-y-2 text-slate-700 list-disc list-inside">
+        <li>
+          <strong>Anthropic（Claude API）</strong>：添付資料の内容を解析するために送信します。
+          <a href="https://www.anthropic.com/legal/privacy" class="text-blue-700 underline" target="_blank" rel="noopener">プライバシーポリシー</a>
+        </li>
+        <li>
+          <strong>LINE（Messaging API）</strong>：判定結果を利用者本人に通知するために送信します。
+          <a href="https://line.me/ja/terms/policy/" class="text-blue-700 underline" target="_blank" rel="noopener">プライバシーポリシー</a>
+        </li>
+        <li>
+          <strong>GitHub（GitHub Actions）</strong>：本ツールを毎朝自動実行する実行環境として利用します。
+          <a href="https://docs.github.com/ja/site-policy/privacy-policies/github-general-privacy-statement" class="text-blue-700 underline" target="_blank" rel="noopener">プライバシーポリシー</a>
+        </li>
+      </ul>
+      <p class="text-slate-700 mt-3">
+        これら以外の第三者に情報を提供・販売することはありません。
+        広告配信や分析のための利用も行いません。
+      </p>
+    </section>
+
+    <section class="bg-white rounded-xl p-6 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-3">5. 情報の保存</h2>
+      <p class="text-slate-700 mb-3">
+        メール本文および添付ファイルの内容を保存することはありません。解析後は破棄されます。
+      </p>
+      <p class="text-slate-700">
+        同じメールを繰り返し通知しないようにするため、処理済みメールの識別子（メールID）のみを
+        非公開のGitHubリポジトリに記録します。この識別子からメールの内容を復元することはできません。
+      </p>
+    </section>
+
+    <section class="bg-white rounded-xl p-6 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-3">6. アクセス権の取り消し</h2>
+      <p class="text-slate-700">
+        本ツールへのアクセス許可は、
+        <a href="https://myaccount.google.com/permissions" class="text-blue-700 underline" target="_blank" rel="noopener">Googleアカウントのセキュリティ設定</a>
+        からいつでも取り消すことができます。取り消し後、本ツールはメールにアクセスできなくなります。
+      </p>
+    </section>
+
+    <section class="bg-white rounded-xl p-6 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-3">7. お問い合わせ</h2>
+      <p class="text-slate-700">
+        本ポリシーに関するお問い合わせは、以下の連絡先までお願いします。
+      </p>
+      <p class="mt-2 text-slate-900 font-medium">okagesan24@gmail.com</p>
+    </section>
+
+  </div>
+
+</div>
+
+</body>
+</html>
